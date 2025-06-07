@@ -1,0 +1,23 @@
+{
+  "name": "simple-release-action",
+  "type": "module",
+  "description": "A simple action to release projects with monorepo support.",
+  "author": "Dan Onoshko <danon0404@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/TrigenSoftware/simple-release-action/tree/main#readme",
+  "funding": "https://ko-fi.com/dangreen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TrigenSoftware/simple-release-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TrigenSoftware/simple-release-action/issues"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
+    "@simple-release/config": "^2.0.0",
+    "@simple-release/github-action": "^2.0.0"
+  }
+}

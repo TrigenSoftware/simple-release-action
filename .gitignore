@@ -1,0 +1,30 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Optional npm cache directory
+.npm
+
+# OS stuff
+._*
+.DS_Store
+
+# Some caches
+.*cache
+
+# Env files
+.env
+
+# IDE files
+.idea
+.vscode
+
+# Temporary files
+tmp
+
+# Dependency directory
+node_modules

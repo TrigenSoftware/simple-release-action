@@ -1,0 +1,30 @@
+name: simple-release-action
+description: A simple GitHub Action to automate version bumps, changelogs, and releases using Conventional Commits.
+author: Dan Onoshko <danon0404@gmail.com>
+inputs:
+  workflow:
+    description: |
+      Workflow to run.
+      - full: create PR with release changes and release on merge (default)
+      - pull-request: create PR with release changes
+      - release: run release on release commit
+      - check: run context check to skip unnecessary runs (e.g. on issue_comment)
+    default: 'full'
+  github-token:
+    description: GitHub token to authenticate with the GitHub API
+  npm-token:
+    description: NPM token to authenticate with the NPM registry. Passed to `NODE_AUTH_TOKEN` env variable.
+  publish-token:
+    description: Generic token for config file. Passed to `PUBLISH_TOKEN` env variable.
+  branch:
+    description: Branch to store release changes and create pull request from.
+    default: simple-release
+outputs:
+  continue:
+    description: Outputs 'true' when the 'check' workflow determines the context is appropriate.
+runs:
+  using: node20
+  main: index.js
+branding:
+  icon: send
+  color: green
