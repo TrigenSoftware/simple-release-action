@@ -1,0 +1,47 @@
+{
+  "name": "conventional-recommended-bump",
+  "type": "module",
+  "version": "11.2.0",
+  "description": "Get a recommended version bump based on conventional commits.",
+  "author": {
+    "name": "Steve Mao",
+    "email": "maochenyan@gmail.com",
+    "url": "https://github.com/stevemao"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-recommended-bump#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/conventional-changelog.git",
+    "directory": "packages/conventional-recommended-bump"
+  },
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/conventional-changelog/issues"
+  },
+  "keywords": [
+    "conventional-recommended-bump",
+    "recommend",
+    "conventional",
+    "bump"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "meow": "^13.0.0",
+    "@conventional-changelog/git-client": "^2.5.1",
+    "conventional-changelog-preset-loader": "^5.0.0",
+    "conventional-commits-filter": "^5.0.0",
+    "conventional-commits-parser": "^6.1.0"
+  },
+  "bin": {
+    "conventional-recommended-bump": "./dist/cli/index.js"
+  }
+}
