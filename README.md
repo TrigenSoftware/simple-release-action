@@ -57,6 +57,8 @@ jobs:
       continue: ${{ steps.check.outputs.continue }}
       workflow: ${{ steps.check.outputs.workflow }}
     steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
       - name: Context check
         id: check
         uses: trigensoftware/simple-release-action@v1
@@ -69,6 +71,8 @@ jobs:
     needs: check
     if: needs.check.outputs.workflow == 'pull-request'
     steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
       - name: Create or update pull request
         uses: trigensoftware/simple-release-action@v1
         with:
