@@ -10,7 +10,20 @@ See [simple-release docs](https://github.com/TrigenSoftware/simple-release/tree/
 
 ## Usage
 
-1. Create `.simple-release.js` config file with project setup in repository root:
+1. Create `.simple-release.json` config file with project setup in repository root:
+
+```json
+{
+  "project": ["@simple-release/pnpm#PnpmWorkspacesProject", {
+    "mode": "fixed"
+  }]
+}
+```
+
+<details>
+<summary>js-config example</summary>
+
+You should install the addon package first, then:
 
 ```js
 import { PnpmWorkspacesProject } from '@simple-release/pnpm'
@@ -19,6 +32,8 @@ export const project = new PnpmWorkspacesProject({
   mode: 'fixed'
 })
 ```
+
+</details>
 
 In this example [@simple-release/pnpm](https://github.com/TrigenSoftware/simple-release/blob/main/packages/pnpm#readme) is used to setup a monorepo project with fixed versioning mode.
 
@@ -40,17 +55,28 @@ jobs:
     name: Check if release job should run
     outputs:
       continue: ${{ steps.check.outputs.continue }}
+      workflow: ${{ steps.check.outputs.workflow }}
     steps:
       - name: Check context
         id: check
         uses: trigensoftware/simple-release-action@v1
         with:
           workflow: check
+  pull-request:
+    runs-on: ubuntu-latest
+    name: Pull request
+    needs: check
+    if: needs.check.outputs.workflow == 'pull-request'
+    steps:
+      - name: Create or update pull request
+        uses: trigensoftware/simple-release-action@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
   release:
     runs-on: ubuntu-latest
     name: Release
     needs: check
-    if: needs.check.outputs.continue == 'true'
+    if: needs.check.outputs.workflow == 'release'
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v4
@@ -66,7 +92,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: pnpm install
-      - name: Simple release
+      - name: Release notes and publish
         uses: trigensoftware/simple-release-action@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -96,7 +122,7 @@ Workflow to run.
 - `full`: create PR with release changes and release on merge (default)
 - `pull-request`: create PR with release changes
 - `release`: run release on release commit
-- `check`: run context check to skip unnecessary runs (e.g. on issue_comment)
+- `check`: run context check to skip unnecessary runs (e.g. on issue_comment) and determines workflow to run
 
 ### github-token
 

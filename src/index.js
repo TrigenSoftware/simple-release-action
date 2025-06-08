@@ -1,19 +1,25 @@
 import {
   getInput,
   setFailed,
-  setOutput,
+  setOutput
 } from '@actions/core'
 import { getOctokit } from '@actions/github'
 import { load } from '@simple-release/config'
 import {
   ReleaserGithubAction,
-  ifSetOptionsComment
+  ifSetOptionsComment,
+  ifReleaseCommit
 } from '@simple-release/github-action'
+import {
+  lazyDependencyImport,
+  saveDependenciesCache
+} from './dependencies.js'
 
 const workflow = getInput('workflow')
 
-if (workflow === 'check') {
-  setOutput('continue', ifSetOptionsComment() !== false)
+if (workflow === 'check' && ifSetOptionsComment() === false) {
+  setOutput('continue', 'false')
+  setOutput('workflow', 'none')
   process.exit(0)
 }
 
@@ -33,7 +39,9 @@ try {
   } = await load({
     config: true,
     project: true
-  })
+  }, lazyDependencyImport)
+
+  await saveDependenciesCache()
 
   const gha = new ReleaserGithubAction({
     project,
@@ -48,7 +56,15 @@ try {
       }
     })
 
-  if (workflow === 'full') {
+  if (workflow === 'check') {
+    const isReleaseCommit = await ifReleaseCommit(gha)
+    const workflow = isReleaseCommit
+      ? 'release'
+      : 'pull-request'
+
+    setOutput('continue', 'true')
+    setOutput('workflow', workflow)
+  } else if (workflow === 'full') {
     await gha.runAction()
   } else if (workflow === 'pull-request') {
     await gha.runPullRequestAction()
@@ -62,5 +78,5 @@ try {
     setFailed('An unknown error occurred')
   }
 
-  process.exit(1)
+  throw error
 }

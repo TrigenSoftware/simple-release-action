@@ -8,7 +8,7 @@ inputs:
       - full: create PR with release changes and release on merge (default)
       - pull-request: create PR with release changes
       - release: run release on release commit
-      - check: run context check to skip unnecessary runs (e.g. on issue_comment)
+      - check: run context check to skip unnecessary runs (e.g. on issue_comment) and determines workflow to run
     default: 'full'
   github-token:
     description: GitHub token to authenticate with the GitHub API
@@ -22,9 +22,11 @@ inputs:
 outputs:
   continue:
     description: Outputs 'true' when the 'check' workflow determines the context is appropriate.
+  workflow:
+    description: The workflow to run based on the context.
 runs:
   using: node20
-  main: index.js
+  main: src/index.js
 branding:
   icon: send
   color: green
