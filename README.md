@@ -37,6 +37,8 @@ export const project = new PnpmWorkspacesProject({
 
 In this example [@simple-release/pnpm](https://github.com/TrigenSoftware/simple-release/blob/main/packages/pnpm#readme) is used to setup a monorepo project with fixed versioning mode.
 
+Addon will be automatically downloaded and cached by the action when it runs.
+
 You can find other addons in the [simple-release repository](https://github.com/TrigenSoftware/simple-release).
 
 2. Create `.github/workflows/release.yml` with release workflow, like in the example below:
