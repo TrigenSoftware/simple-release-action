@@ -23,7 +23,7 @@ if (workflow === 'check' && ifSetOptionsComment() === false) {
   process.exit(0)
 }
 
-const GITHUB_TOKEN = getInput('github-token', { required: true })
+const GITHUB_TOKEN = getInput('github-token')
 const NODE_AUTH_TOKEN = getInput('npm-token')
 const PUBLISH_TOKEN = getInput('publish-token')
 const branch = getInput('branch')

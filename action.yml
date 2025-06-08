@@ -12,6 +12,7 @@ inputs:
     default: 'full'
   github-token:
     description: GitHub token to authenticate with the GitHub API
+    required: true
   npm-token:
     description: NPM token to authenticate with the NPM registry. Passed to `NODE_AUTH_TOKEN` env variable.
   publish-token:
