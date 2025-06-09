@@ -14,6 +14,9 @@
     "url": "https://github.com/TrigenSoftware/simple-release-action/issues"
   },
   "main": "index.js",
+  "scripts": {
+    "update-latest-branch": "git checkout latest && git reset --hard main && git push origin latest --force"
+  },
   "dependencies": {
     "@actions/cache": "^4.0.3",
     "@actions/core": "^1.11.1",
