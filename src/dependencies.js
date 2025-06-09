@@ -1,4 +1,5 @@
 import fs from 'fs/promises'
+import os from 'os'
 import { join } from 'path'
 import {
   saveCache,
@@ -9,7 +10,7 @@ import { getQuery } from '@simple-release/config'
 import requireResolve from './resolve.cjs'
 
 const NPM_CLI = requireResolve('npm').replace('index.js', join('bin', 'npm-cli.js'))
-const DEPENDENCIES_DIR = join(process.cwd(), '.simple-release-dependencies')
+const DEPENDENCIES_DIR = join(os.homedir(), '.simple-release-dependencies')
 
 function getCacheKeyFromConfig(config) {
   const projectQuery = getQuery(config.project)

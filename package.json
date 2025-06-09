@@ -15,7 +15,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "update-latest-branch": "git checkout latest && git reset --hard main && git push origin latest --force"
+    "update-latest-branch": "git checkout latest && git reset --hard main && git push origin latest --force && git checkout main"
   },
   "dependencies": {
     "@actions/cache": "^4.0.3",
