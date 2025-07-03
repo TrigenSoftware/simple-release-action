@@ -63,7 +63,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Context check
         id: check
-        uses: trigensoftware/simple-release-action@v1
+        uses: trigensoftware/simple-release-action@v1.0.0
         with:
           workflow: check
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -76,7 +76,7 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v4
       - name: Create or update pull request
-        uses: trigensoftware/simple-release-action@v1
+        uses: trigensoftware/simple-release-action@v1.0.0
         with:
           workflow: pull-request
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -101,7 +101,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Release
-        uses: trigensoftware/simple-release-action@v1
+        uses: trigensoftware/simple-release-action@v1.0.0
         with:
           workflow: release
           github-token: ${{ secrets.GITHUB_TOKEN }}
