@@ -1,6 +1,8 @@
 import fs from 'fs/promises'
 import os from 'os'
-import { join } from 'path'
+import { join, dirname } from 'path'
+import { createHash } from 'crypto'
+import { fileURLToPath } from 'url'
 import {
   saveCache,
   restoreCache
@@ -9,14 +11,27 @@ import { exec } from '@actions/exec'
 import { getQuery } from '@simple-release/config'
 import requireResolve from './resolve.cjs'
 
-const NPM_CLI = requireResolve('npm').replace('index.js', join('bin', 'npm-cli.js'))
+const DIR = dirname(fileURLToPath(import.meta.url))
 const DEPENDENCIES_DIR = join(os.homedir(), '.simple-release-dependencies')
+const NPM_CLI = requireResolve('npm').replace('index.js', join('bin', 'npm-cli.js'))
 
-function getCacheKeyFromConfig(config) {
+async function getDependenciesHash() {
+  try {
+    const packageLockPath = join(DIR, '..', 'package-lock.json')
+    const packageLockContent = await fs.readFile(packageLockPath, 'utf8')
+
+    return createHash('sha256').update(packageLockContent).digest('hex').substring(0, 8)
+  } catch {
+    return ''
+  }
+}
+
+async function getCacheKeyFromConfig(config) {
   const projectQuery = getQuery(config.project)
   const hostingQuery = getQuery(config.hosting)
+  const packageLockHash = await getDependenciesHash()
 
-  return [projectQuery, hostingQuery].filter(Boolean).join('+')
+  return [projectQuery, hostingQuery, packageLockHash].filter(Boolean).join('+')
 }
 
 async function install(pkg, version) {
@@ -55,7 +70,7 @@ let cacheKey = null
 
 export async function lazyDependencyImport(pkg, version, config) {
   if (cacheStatus === CACHE_NOT_CHECKED) {
-    cacheKey = getCacheKeyFromConfig(config)
+    cacheKey = await getCacheKeyFromConfig(config)
 
     const hit = await restoreCache(
       [DEPENDENCIES_DIR],
