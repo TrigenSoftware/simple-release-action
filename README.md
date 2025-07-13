@@ -8,6 +8,9 @@ A simple GitHub Action to automate version bumps, changelogs, and releases using
 
 See [simple-release docs](https://github.com/TrigenSoftware/simple-release/tree/main/packages/core#readme) for more details.
 
+> [!TIP]
+> New to Сonventional Сommits? [Check out The Complete Guide](https://github.com/TrigenSoftware/simple-release/blob/main/GUIDE.md).
+
 ## Usage
 
 1. Create `.simple-release.json` config file with project setup in repository root:
@@ -108,7 +111,7 @@ jobs:
           npm-token: ${{ secrets.NPM_TOKEN }}
 ```
 
-Now every time you push to the `main` branch, the action will create or update a pull request with release changes if necessary. When the pull request is merged, it will automatically release the project. Also you can comment on the pull request to pass additional options to simple-release:
+Now every time you push to the `main` branch, the action will create or update a pull request with a version bump and updated changelog if necessary. When the pull request is merged, it will automatically release the project. Also you can comment on the pull request to pass additional options to simple-release:
 
 ````md
 !simple-release/set-options
