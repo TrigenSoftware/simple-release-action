@@ -30,7 +30,7 @@ for (let p = dirname(path); !isRoot(p); p = dirname(p)) {
 You can do this:
 
 ```js
-const walkUpPath = require('walk-up-path')
+const { walkUpPath } = require('walk-up-path')
 for (const p of walkUpPath(path)) {
   // ... do stuff ..
 }
@@ -39,7 +39,7 @@ for (const p of walkUpPath(path)) {
 ## API
 
 ```js
-const walkUpPath = require('walk-up-path')
+const { walkUpPath } = require('walk-up-path')
 ```
 
 Give the fn a string, it'll yield all the directories walking up to the

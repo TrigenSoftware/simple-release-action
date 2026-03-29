@@ -18,7 +18,7 @@
 [node-url]: https://nodejs.org
 
 [deps]: https://img.shields.io/librariesio/release/npm/@simple-libs/stream-utils
-[deps-url]: https://libraries.io/npm/@simple-libs%2Fstream-utils/tree
+[deps-url]: https://libraries.io/npm/@simple-libs%2Fstream-utils
 
 [size]: https://packagephobia.com/badge?p=@simple-libs/stream-utils
 [size-url]: https://packagephobia.com/result?p=@simple-libs/stream-utils

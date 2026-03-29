@@ -18,7 +18,7 @@
 [node-url]: https://nodejs.org
 
 [deps]: https://img.shields.io/librariesio/release/npm/conventional-changelog-conventionalcommits
-[deps-url]: https://libraries.io/npm/conventional-changelog-conventionalcommits/tree
+[deps-url]: https://libraries.io/npm/conventional-changelog-conventionalcommits
 
 [size]: https://packagephobia.com/badge?p=conventional-changelog-conventionalcommits
 [size-url]: https://packagephobia.com/result?p=conventional-changelog-conventionalcommits

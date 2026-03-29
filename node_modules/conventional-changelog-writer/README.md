@@ -18,7 +18,7 @@
 [node-url]: https://nodejs.org
 
 [deps]: https://img.shields.io/librariesio/release/npm/conventional-changelog-writer
-[deps-url]: https://libraries.io/npm/conventional-changelog-writer/tree
+[deps-url]: https://libraries.io/npm/conventional-changelog-writer
 
 [size]: https://packagephobia.com/badge?p=conventional-changelog-writer
 [size-url]: https://packagephobia.com/result?p=conventional-changelog-writer

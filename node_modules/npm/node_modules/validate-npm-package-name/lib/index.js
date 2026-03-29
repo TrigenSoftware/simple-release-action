@@ -1,8 +1,8 @@
 'use strict'
-const { builtinModules: builtins } = require('module')
+const builtins = require('./builtin-modules.json')
 
 var scopedPackagePattern = new RegExp('^(?:@([^/]+?)[/])?([^/]+?)$')
-var blacklist = [
+var exclusionList = [
   'node_modules',
   'favicon.ico',
 ]
@@ -34,6 +34,10 @@ function validate (name) {
     errors.push('name cannot start with a period')
   }
 
+  if (name.startsWith('-')) {
+    errors.push('name cannot start with a hyphen')
+  }
+
   if (name.match(/^_/)) {
     errors.push('name cannot start with an underscore')
   }
@@ -43,9 +47,9 @@ function validate (name) {
   }
 
   // No funny business
-  blacklist.forEach(function (blacklistedName) {
-    if (name.toLowerCase() === blacklistedName) {
-      errors.push(blacklistedName + ' is a blacklisted name')
+  exclusionList.forEach(function (excludedName) {
+    if (name.toLowerCase() === excludedName) {
+      errors.push(excludedName + ' is not a valid package name')
     }
   })
 

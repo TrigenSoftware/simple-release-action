@@ -18,7 +18,7 @@
 [node-url]: https://nodejs.org
 
 [deps]: https://img.shields.io/librariesio/release/npm/@simple-libs/child-process-utils
-[deps-url]: https://libraries.io/npm/@simple-libs%2Fchild-process-utils/tree
+[deps-url]: https://libraries.io/npm/@simple-libs%2Fchild-process-utils
 
 [size]: https://packagephobia.com/badge?p=@simple-libs/child-process-utils
 [size-url]: https://packagephobia.com/result?p=@simple-libs/child-process-utils

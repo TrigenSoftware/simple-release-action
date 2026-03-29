@@ -18,7 +18,7 @@
 [node-url]: https://nodejs.org
 
 [deps]: https://img.shields.io/librariesio/release/npm/@simple-libs/hosted-git-info
-[deps-url]: https://libraries.io/npm/@simple-libs%2Fhosted-git-info/tree
+[deps-url]: https://libraries.io/npm/@simple-libs%2Fhosted-git-info
 
 [size]: https://packagephobia.com/badge?p=@simple-libs/hosted-git-info
 [size-url]: https://packagephobia.com/result?p=@simple-libs/hosted-git-info
