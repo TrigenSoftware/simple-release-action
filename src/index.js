@@ -28,8 +28,13 @@ const NODE_AUTH_TOKEN = getInput('npm-token')
 const PUBLISH_TOKEN = getInput('publish-token')
 const branch = getInput('branch')
 
-process.env.NODE_AUTH_TOKEN = NODE_AUTH_TOKEN
-process.env.PUBLISH_TOKEN = PUBLISH_TOKEN
+if (NODE_AUTH_TOKEN) {
+  process.env.NODE_AUTH_TOKEN = NODE_AUTH_TOKEN
+}
+
+if (PUBLISH_TOKEN) {
+  process.env.PUBLISH_TOKEN = PUBLISH_TOKEN
+}
 
 try {
   const {
