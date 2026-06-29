@@ -1,0 +1,6 @@
+{
+  "project": "@simple-release/node-gha#NodeGhaProject",
+  "releaser": {
+    "verbose": true
+  }
+}
