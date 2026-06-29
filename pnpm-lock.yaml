@@ -24,8 +24,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)
       '@simple-release/github-action':
-        specifier: ^3.0.0
-        version: 3.0.0(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)
+        specifier: ^3.0.3
+        version: 3.0.3(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)
       npm:
         specifier: ^11.4.1
         version: 11.17.0
@@ -212,8 +212,12 @@ packages:
     resolution: {integrity: sha512-wUlhYq3GRTXUvqEuBMm3tsm9IMEb+/4HReGVumPlBGQOf7h6GJBlLT71Zf36trqKP88tr0J5/KoaKgWL9KsIqw==}
     engines: {node: '>=22'}
 
-  '@simple-release/github-action@3.0.0':
-    resolution: {integrity: sha512-PST55RG3P3AKukm9F+raAXj/bBiV5GgNZ1zPP7zZ2hf9nK2LJnF0VIVWC72gwmECN94JgW6uyNBZW3MmI6mOGg==}
+  '@simple-release/core@3.0.3':
+    resolution: {integrity: sha512-d5ckOVJPAIkI9/pRrpRBk3Ro7bHqMtCQkUQVG3rUEP9m9Kb7oNPSNjMzJe7t//Zkwtkq7q98auqshKWhEkc3hg==}
+    engines: {node: '>=22'}
+
+  '@simple-release/github-action@3.0.3':
+    resolution: {integrity: sha512-vsu1sfDK3hF+t4vjUqkB0Fj4SiOhjg/+SxDCLLe/5VS8zguFGbwr7VJ5w8c4mcEHnG8vahg/ykxsgbGmi7Y2Gg==}
     engines: {node: '>=22'}
 
   '@simple-release/github@3.0.0':
@@ -719,12 +723,28 @@ snapshots:
       - conventional-commits-filter
       - conventional-commits-parser
 
-  '@simple-release/github-action@3.0.0(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)':
+  '@simple-release/core@3.0.3(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)':
+    dependencies:
+      '@conventional-changelog/git-client': 3.0.1(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)
+      '@conventional-changelog/template': 1.2.0
+      '@simple-libs/child-process-utils': 2.0.0
+      '@simple-libs/hosted-git-info': 2.0.0
+      '@simple-libs/stream-utils': 2.0.0
+      conventional-changelog: 8.0.0(conventional-commits-filter@6.0.0)
+      conventional-changelog-conventionalcommits: 10.2.0
+      conventional-changelog-preset-loader: 6.0.0
+      conventional-recommended-bump: 12.0.0
+      semver: 7.8.5
+    transitivePeerDependencies:
+      - conventional-commits-filter
+      - conventional-commits-parser
+
+  '@simple-release/github-action@3.0.3(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)':
     dependencies:
       '@actions/core': 3.0.1
       '@actions/github': 9.1.1
       '@simple-release/config': 3.0.0(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)
-      '@simple-release/core': 3.0.0(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)
+      '@simple-release/core': 3.0.3(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)
       '@simple-release/github': 3.0.0(conventional-commits-filter@6.0.0)(conventional-commits-parser@7.0.0)
     transitivePeerDependencies:
       - conventional-commits-filter

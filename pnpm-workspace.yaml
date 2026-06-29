@@ -1,6 +1,6 @@
 autoInstallPeers: false
 minimumReleaseAgeExclude:
   - '@simple-release/config@3.0.0'
-  - '@simple-release/core@3.0.0'
-  - '@simple-release/github-action@3.0.0'
+  - '@simple-release/core@3.0.0 || 3.0.3'
+  - '@simple-release/github-action@3.0.0 || 3.0.3'
   - '@simple-release/github@3.0.0'
