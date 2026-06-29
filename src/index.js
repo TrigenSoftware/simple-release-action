@@ -7,6 +7,7 @@ import { getOctokit } from '@actions/github'
 import { load } from '@simple-release/config'
 import {
   ReleaserGithubAction,
+  getInputOptions,
   ifSetOptionsComment,
   ifReleaseCommit
 } from '@simple-release/github-action'
@@ -26,7 +27,7 @@ if (workflow === 'check' && ifSetOptionsComment() === false) {
 const GITHUB_TOKEN = getInput('github-token')
 const NODE_AUTH_TOKEN = getInput('npm-token')
 const PUBLISH_TOKEN = getInput('publish-token')
-const branch = getInput('branch')
+const inputOptions = getInputOptions()
 
 if (NODE_AUTH_TOKEN) {
   process.env.NODE_AUTH_TOKEN = NODE_AUTH_TOKEN
@@ -57,7 +58,19 @@ try {
       ...options,
       checkout: {
         ...options.checkout,
-        branch: branch || options.checkout?.branch
+        ...inputOptions.checkout
+      },
+      bump: {
+        ...options.bump,
+        ...inputOptions.bump
+      },
+      maintenanceBranch: {
+        ...options.maintenanceBranch,
+        ...inputOptions.maintenanceBranch
+      },
+      publish: {
+        ...options.publish,
+        ...inputOptions.publish
       }
     })
 
@@ -75,6 +88,8 @@ try {
     await gha.runPullRequestAction()
   } else if (workflow === 'release') {
     await gha.runReleaseAction()
+  } else if (workflow === 'snapshot') {
+    await gha.runSnapshotAction(inputOptions.bump?.snapshot)
   }
 } catch (error) {
   if (error instanceof Error) {

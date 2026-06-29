@@ -8,6 +8,7 @@ inputs:
       - full: create PR with release changes and release on merge (default)
       - pull-request: create PR with release changes
       - release: run release on release commit
+      - snapshot: publish a temporary snapshot version
       - check: run context check to skip unnecessary runs (e.g. on issue_comment) and determines workflow to run
     default: 'full'
   github-token:
@@ -20,13 +21,35 @@ inputs:
   branch:
     description: Branch to store release changes and create pull request from.
     default: simple-release
+  bump-version:
+    description: Force set specific version.
+  bump-as:
+    description: Release type. One of 'major', 'minor', 'patch', or 'prerelease'.
+  bump-prerelease:
+    description: Pre-release identifier (e.g., "alpha", "beta").
+  bump-snapshot:
+    description: Snapshot pre-release identifier.
+  bump-first-release:
+    description: Whether this is the first release.
+  bump-skip:
+    description: Skip version bump.
+  bump-by-project:
+    description: JSON object with per-project bump options for monorepos.
+  maintenance-branch:
+    description: Create maintenance branches for previous major versions.
+  publish-skip:
+    description: Skip publishing.
+  publish-access:
+    description: Package access level. One of 'public' or 'restricted'.
+  publish-tag:
+    description: Tag for npm publication.
 outputs:
   continue:
     description: Outputs 'true' when the 'check' workflow determines the context is appropriate.
   workflow:
     description: The workflow to run based on the context.
 runs:
-  using: node20
+  using: node24
   main: src/index.js
 branding:
   icon: send

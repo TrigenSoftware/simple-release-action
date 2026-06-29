@@ -27,4 +27,11 @@ coverage
 tmp
 
 # Dependency directory
-node_modules/.bin
+node_modules
+
+# Staff
+.vite*
+.codex
+.agents
+skills-lock.json
+

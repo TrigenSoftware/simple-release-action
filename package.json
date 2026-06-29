@@ -1,6 +1,7 @@
 {
   "name": "simple-release-action",
   "type": "module",
+  "version": "1.1.9",
   "description": "A simple action to release projects with monorepo support.",
   "author": "Dan Onoshko <danon0404@gmail.com>",
   "license": "MIT",
@@ -13,19 +14,18 @@
   "bugs": {
     "url": "https://github.com/TrigenSoftware/simple-release-action/issues"
   },
-  "main": "index.js",
-  "scripts": {
-    "update-latest-branch": "git checkout latest && git reset --hard main && git push origin latest --force && git checkout main",
-    "update-major-branch": "git checkout v1 && git reset --hard main && git push origin v1 --force && git checkout main",
-    "update-branches": "npm run update-latest-branch && npm run update-major-branch"
-  },
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "node_modules"
+  ],
   "dependencies": {
     "@actions/cache": "^6.0.0",
     "@actions/core": "^3.0.0",
     "@actions/exec": "^3.0.0",
     "@actions/github": "^9.0.0",
-    "@simple-release/config": "^2.0.0",
-    "@simple-release/github-action": "^2.0.0",
+    "@simple-release/config": "^3.0.0",
+    "@simple-release/github-action": "^3.0.0",
     "npm": "^11.4.1"
   }
 }

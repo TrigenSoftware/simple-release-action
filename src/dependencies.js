@@ -17,7 +17,7 @@ const NPM_CLI = requireResolve('npm').replace('index.js', join('bin', 'npm-cli.j
 
 async function getDependenciesHash() {
   try {
-    const packageLockPath = join(DIR, '..', 'package-lock.json')
+    const packageLockPath = join(DIR, '..', 'pnpm-lock.yaml')
     const packageLockContent = await fs.readFile(packageLockPath, 'utf8')
 
     return createHash('sha256').update(packageLockContent).digest('hex').substring(0, 8)

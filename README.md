@@ -134,6 +134,7 @@ Workflow to run.
 - `full`: create PR with release changes and release on merge (default)
 - `pull-request`: create PR with release changes
 - `release`: run release on release commit
+- `snapshot`: publish a temporary snapshot version
 - `check`: run context check to skip unnecessary runs (e.g. on issue_comment) and determines workflow to run
 
 ### github-token
@@ -154,3 +155,52 @@ Generic token to use in config file. Passed to `PUBLISH_TOKEN` env variable.
 ### branch
 
 Branch to store release changes and create pull request from. Defaults to `simple-release`.
+
+### bump-version
+
+Force set specific version.
+
+### bump-as
+
+Release type. One of `major`, `minor`, `patch`, or `prerelease`.
+
+### bump-prerelease
+
+Pre-release identifier (e.g., `alpha`, `beta`).
+
+### bump-snapshot
+
+Snapshot pre-release identifier.
+
+### bump-first-release
+
+Whether this is the first release. Accepts `true` or `false`.
+
+### bump-skip
+
+Skip version bump. Accepts `true` or `false`.
+
+### bump-by-project
+
+JSON object with per-project bump options for monorepos.
+
+```yaml
+with:
+  bump-by-project: '{"pkg-a":{"as":"minor"},"pkg-b":{"skip":true}}'
+```
+
+### maintenance-branch
+
+Create maintenance branches for previous major versions. Accepts `true` or `false`.
+
+### publish-skip
+
+Skip publishing. Accepts `true` or `false`.
+
+### publish-access
+
+Package access level. One of `public` or `restricted`.
+
+### publish-tag
+
+Tag for npm publication.
