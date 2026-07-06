@@ -26,6 +26,9 @@ importers:
       '@simple-release/core':
         specifier: ^3.2.0
         version: 3.2.0
+      '@simple-release/github':
+        specifier: ^3.2.0
+        version: 3.2.0
       '@simple-release/github-action':
         specifier: ^3.1.1
         version: 3.1.1
@@ -219,8 +222,8 @@ packages:
     resolution: {integrity: sha512-PLwe5rOvtmmXpOdb8S5HrvyOVJvr0lcwy7iyuFZtwjSbsU2wgwjvfllNVjEZ20uu+jtWhghAqxHXbJJlvkoxAQ==}
     engines: {node: '>=22'}
 
-  '@simple-release/github@3.0.0':
-    resolution: {integrity: sha512-ualRmHk30nwObCuliWU9jKI6CousXeaH5S3vgbKRxaqxad/ID36oTLEwKBUG+BPckWCyUJH/j7JOhQoeZqSAVg==}
+  '@simple-release/github@3.2.0':
+    resolution: {integrity: sha512-jclnyd3rg5A8qdsfVQMKDMYH8ajntnvSC6pJ17PXgLT3bIWulF7z7Kfsrq84EP4lBbMlazhDR/1q6HOKyeVzPA==}
     engines: {node: '>=22'}
 
   '@typespec/ts-http-runtime@0.3.6':
@@ -724,9 +727,9 @@ snapshots:
       '@actions/github': 9.1.1
       '@simple-release/config': 3.0.0
       '@simple-release/core': 3.2.0
-      '@simple-release/github': 3.0.0
+      '@simple-release/github': 3.2.0
 
-  '@simple-release/github@3.0.0':
+  '@simple-release/github@3.2.0':
     dependencies:
       '@octokit/rest': 22.0.1
       '@simple-release/core': 3.2.0
