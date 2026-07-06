@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/TrigenSoftware/simple-release-action/compare/v2.0.1...v2.0.2) (2026-07-06)
+
+### Bug Fixes
+
+* update simple-release dependencies to v3.1.1 ([6cd37b2](https://github.com/TrigenSoftware/simple-release-action/commit/6cd37b2104200b0c4075e4457334c8dddfe43906))
+
 ## [2.0.1](https://github.com/TrigenSoftware/simple-release-action/compare/v2.0.0...v2.0.1) (2026-07-06)
 
 ### Bug Fixes
