@@ -1,7 +1,7 @@
 {
   "name": "simple-release-action",
   "type": "module",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "A simple action to release projects with monorepo support.",
   "author": "Dan Onoshko <danon0404@gmail.com>",
   "license": "MIT",
