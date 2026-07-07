@@ -24,8 +24,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       '@simple-release/core':
-        specifier: ^3.2.3
-        version: 3.2.3
+        specifier: ^3.2.4
+        version: 3.2.4
       '@simple-release/github':
         specifier: ^3.2.0
         version: 3.2.0
@@ -214,8 +214,8 @@ packages:
     resolution: {integrity: sha512-mzv91PPkkGiEPxNQdgE1oDweFH/DoDZFE2PP5RH7bPrrM1UEJcAqCU6dEW6XQCSg0L76dUa0DCZyHSpCCUSmCg==}
     engines: {node: '>=22'}
 
-  '@simple-release/core@3.2.3':
-    resolution: {integrity: sha512-SZRgMAwDXsgfzMmNKvh7ZLvigk1FSiw7+0MHd4EZKT4J4rAZ599tP0qTN8dUmIwGOoQS0oRMjYaiUoWOjn1p8w==}
+  '@simple-release/core@3.2.4':
+    resolution: {integrity: sha512-+uJV3ksS+tfg+L/NGrqCz06ngLil9e7eai1ePnXW4xLuCEF3mxwNQUmhkrxf56CLOgN2ZKYXitDyAWMpB9I/WQ==}
     engines: {node: '>=22'}
 
   '@simple-release/github-action@3.1.1':
@@ -703,10 +703,10 @@ snapshots:
 
   '@simple-release/config@3.0.0':
     dependencies:
-      '@simple-release/core': 3.2.3
+      '@simple-release/core': 3.2.4
       find-up-simple: 1.0.1
 
-  '@simple-release/core@3.2.3':
+  '@simple-release/core@3.2.4':
     dependencies:
       '@conventional-changelog/git-client': 3.1.0(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.0.1)
       '@conventional-changelog/template': 1.2.1
@@ -726,13 +726,13 @@ snapshots:
       '@actions/core': 3.0.1
       '@actions/github': 9.1.1
       '@simple-release/config': 3.0.0
-      '@simple-release/core': 3.2.3
+      '@simple-release/core': 3.2.4
       '@simple-release/github': 3.2.0
 
   '@simple-release/github@3.2.0':
     dependencies:
       '@octokit/rest': 22.0.1
-      '@simple-release/core': 3.2.3
+      '@simple-release/core': 3.2.4
 
   '@typespec/ts-http-runtime@0.3.6':
     dependencies:
