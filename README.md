@@ -6,10 +6,10 @@ A simple GitHub Action to automate version bumps, changelogs, and releases using
 - 🗂️ Supports monorepos and can release multiple packages in a single run.
 - 🧩 Flexible and extensible with custom addons for different project types.
 
-See [simple-release docs](https://github.com/TrigenSoftware/simple-release/tree/main/packages/core#readme) for more details.
+For more details, guides and API references, check out the [documentation website](https://simple-release.js.org/github-action/).
 
 > [!TIP]
-> New to Сonventional Сommits? [Check out The Complete Guide](https://github.com/TrigenSoftware/simple-release/blob/main/GUIDE.md).
+> New to Conventional Commits? [Check out The Complete Guide](https://simple-release.js.org/getting-started/complete-guide/).
 
 ## Usage
 
@@ -125,82 +125,6 @@ Now every time you push to the `main` branch, the action will create or update a
 ```
 ````
 
-## Options
+## Documentation
 
-### workflow
-
-Workflow to run.
-
-- `full`: create PR with release changes and release on merge (default)
-- `pull-request`: create PR with release changes
-- `release`: run release on release commit
-- `snapshot`: publish a temporary snapshot version
-- `check`: run context check to skip unnecessary runs (e.g. on issue_comment) and determines workflow to run
-
-### github-token
-
-GitHub token to authenticate with the GitHub API.
-
-> [!NOTE]
-> If you want to run workflows on PR created by this action, you need to use a personal access token instead of the default `GITHUB_TOKEN`.
-
-### npm-token
-
-NPM token to authenticate with the NPM registry. Passed to `NODE_AUTH_TOKEN` env variable.
-
-### publish-token
-
-Generic token to use in config file. Passed to `PUBLISH_TOKEN` env variable.
-
-### branch
-
-Branch to store release changes and create pull request from. Defaults to `simple-release`.
-
-### bump-version
-
-Force set specific version.
-
-### bump-as
-
-Release type. One of `major`, `minor`, `patch`, or `prerelease`.
-
-### bump-prerelease
-
-Pre-release identifier (e.g., `alpha`, `beta`).
-
-### bump-snapshot
-
-Snapshot pre-release identifier.
-
-### bump-first-release
-
-Whether this is the first release. Accepts `true` or `false`.
-
-### bump-skip
-
-Skip version bump. Accepts `true` or `false`.
-
-### bump-by-project
-
-JSON object with per-project bump options for monorepos.
-
-```yaml
-with:
-  bump-by-project: '{"pkg-a":{"as":"minor"},"pkg-b":{"skip":true}}'
-```
-
-### maintenance-branch
-
-Create maintenance branches for previous major versions. Accepts `true` or `false`.
-
-### publish-skip
-
-Skip publishing. Accepts `true` or `false`.
-
-### publish-access
-
-Package access level. One of `public` or `restricted`.
-
-### publish-tag
-
-Tag for npm publication.
+For all action inputs, manual releases, snapshot releases, and maintenance branches, visit the [documentation website](https://simple-release.js.org/github-action/).
