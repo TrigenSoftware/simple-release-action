@@ -20,14 +20,14 @@
     "node_modules"
   ],
   "dependencies": {
-    "@actions/cache": "^6.0.0",
-    "@actions/core": "^3.0.0",
+    "@actions/cache": "^6.1.0",
+    "@actions/core": "^3.0.1",
     "@actions/exec": "^3.0.0",
-    "@actions/github": "^9.0.0",
-    "@simple-release/config": "^3.0.0",
-    "@simple-release/core": "^3.2.4",
-    "@simple-release/github": "^3.2.0",
-    "@simple-release/github-action": "^3.1.1",
+    "@actions/github": "^9.1.1",
+    "@simple-release/config": "^3.2.5",
+    "@simple-release/core": "^3.3.0",
+    "@simple-release/github": "^3.3.0",
+    "@simple-release/github-action": "^3.3.0",
     "npm": "^11.4.1"
   }
 }
