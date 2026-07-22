@@ -35,11 +35,7 @@ async function getCacheKeyFromConfig(config) {
 }
 
 async function install(pkg, version) {
-  const args = ['install', pkg]
-
-  if (version) {
-    args.push(`@${version}`)
-  }
+  const args = ['install', version ? `${pkg}@${version}` : pkg]
 
   await exec(NPM_CLI, args, {
     cwd: DEPENDENCIES_DIR,
