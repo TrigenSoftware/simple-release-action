@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.9](https://github.com/TrigenSoftware/simple-release-action/compare/v2.0.8...v2.0.9) (2026-07-22)
+
+### Bug Fixes
+
+* install pinned addon dependency version correctly ([114ce1d](https://github.com/TrigenSoftware/simple-release-action/commit/114ce1d312107d48fa54cbd98b74b990d0581344))
+
 ## [2.0.8](https://github.com/TrigenSoftware/simple-release-action/compare/v2.0.7...v2.0.8) (2026-07-14)
 
 ### Bug Fixes
