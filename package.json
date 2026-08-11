@@ -28,6 +28,6 @@
     "@simple-release/core": "^3.3.0",
     "@simple-release/github": "^3.3.0",
     "@simple-release/github-action": "^3.3.0",
-    "npm": "^11.4.1"
+    "npm": "^12.0.0"
   }
 }
