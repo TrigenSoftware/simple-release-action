@@ -25,8 +25,8 @@
     "@actions/exec": "^3.0.0",
     "@actions/github": "^9.1.1",
     "@simple-release/config": "^3.2.5",
-    "@simple-release/core": "^3.3.0",
-    "@simple-release/github": "^3.3.0",
+    "@simple-release/core": "^3.3.1",
+    "@simple-release/github": "^3.3.1",
     "@simple-release/github-action": "^3.3.0",
     "npm": "^11.4.1"
   }
