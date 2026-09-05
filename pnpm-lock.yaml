@@ -24,11 +24,11 @@ importers:
         specifier: ^3.2.5
         version: 3.2.5
       '@simple-release/core':
-        specifier: ^3.3.0
-        version: 3.3.0
+        specifier: ^3.3.1
+        version: 3.3.1
       '@simple-release/github':
-        specifier: ^3.3.0
-        version: 3.3.0
+        specifier: ^3.3.1
+        version: 3.3.1
       '@simple-release/github-action':
         specifier: ^3.3.0
         version: 3.3.0
@@ -214,16 +214,16 @@ packages:
     resolution: {integrity: sha512-IxNIPQ/JMSR/KF+e+JJnv1W+0KMtKMN6G6B+zIaD0M2e1aLuXaFBoUeJuaNV1eXb3F3DvnbTYjbjHqT+0Q1Ujg==}
     engines: {node: '>=22'}
 
-  '@simple-release/core@3.3.0':
-    resolution: {integrity: sha512-Oq3i/+4gJ9ek0He0tafKBq0XEl1Wt9iq8zylUpjdBNgwFnVvfkKbm1+2EdEwn1IujaWTP+qdH/PVaaZar+fkEA==}
+  '@simple-release/core@3.3.1':
+    resolution: {integrity: sha512-SIfJqljKLjhYlRrjVplhwlwUiPQkdDQvYfXZMqXzO8mUcrmYLR7Y/A2gKd7QhR8cqomxOrmDhkBHiLdaQKI9ig==}
     engines: {node: '>=22'}
 
   '@simple-release/github-action@3.3.0':
     resolution: {integrity: sha512-Y4iez68w4S7lyZRwQm7RJlAxvFYVVlGXgQCcTkAyHgsJ7B/4hBLPlS0qmCxUM7gk0wP+Pv2k7wEbPq+Ge6xMLw==}
     engines: {node: '>=22'}
 
-  '@simple-release/github@3.3.0':
-    resolution: {integrity: sha512-QGU32x5uBJ2cyek2ylkPhMV8pcmhYtSpkxqXbCI7cdSjhlM9S4B8W0MnsBDkB5HsN85WoJHpfleNBBNoQKj4wA==}
+  '@simple-release/github@3.3.1':
+    resolution: {integrity: sha512-2kRrVqGCVMiSbFnR3aerYXYhIWbplViYjhq8kssbMTEd79ncI32OXZfkjIKmPZ8eBU6iieBExdDBcysL/8Y2xg==}
     engines: {node: '>=22'}
 
   '@typespec/ts-http-runtime@0.3.6':
@@ -703,10 +703,10 @@ snapshots:
 
   '@simple-release/config@3.2.5':
     dependencies:
-      '@simple-release/core': 3.3.0
+      '@simple-release/core': 3.3.1
       find-up-simple: 1.0.1
 
-  '@simple-release/core@3.3.0':
+  '@simple-release/core@3.3.1':
     dependencies:
       '@conventional-changelog/git-client': 3.1.0(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.0)
       '@conventional-changelog/template': 1.2.1
@@ -726,13 +726,13 @@ snapshots:
       '@actions/core': 3.0.1
       '@actions/github': 9.1.1
       '@simple-release/config': 3.2.5
-      '@simple-release/core': 3.3.0
-      '@simple-release/github': 3.3.0
+      '@simple-release/core': 3.3.1
+      '@simple-release/github': 3.3.1
 
-  '@simple-release/github@3.3.0':
+  '@simple-release/github@3.3.1':
     dependencies:
       '@octokit/rest': 22.0.1
-      '@simple-release/core': 3.3.0
+      '@simple-release/core': 3.3.1
 
   '@typespec/ts-http-runtime@0.3.6':
     dependencies:
