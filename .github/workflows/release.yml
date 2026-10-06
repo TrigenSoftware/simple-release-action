@@ -22,7 +22,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: .tool-versions
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
@@ -47,7 +47,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: .tool-versions
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
@@ -71,7 +71,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 24
+          node-version-file: .tool-versions
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --config.node-linker=hoisted

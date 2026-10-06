@@ -14,6 +14,9 @@
   "bugs": {
     "url": "https://github.com/TrigenSoftware/simple-release-action/issues"
   },
+  "engines": {
+    "node": ">=24"
+  },
   "main": "src/index.js",
   "files": [
     "src",
