@@ -24,8 +24,8 @@ importers:
         specifier: ^3.2.5
         version: 3.2.5
       '@simple-release/core':
-        specifier: ^3.3.1
-        version: 3.3.1
+        specifier: ^4.0.0
+        version: 4.0.0
       '@simple-release/github':
         specifier: ^3.3.1
         version: 3.3.1
@@ -216,6 +216,10 @@ packages:
 
   '@simple-release/core@3.3.1':
     resolution: {integrity: sha512-SIfJqljKLjhYlRrjVplhwlwUiPQkdDQvYfXZMqXzO8mUcrmYLR7Y/A2gKd7QhR8cqomxOrmDhkBHiLdaQKI9ig==}
+    engines: {node: '>=22'}
+
+  '@simple-release/core@4.0.0':
+    resolution: {integrity: sha512-OqomtiOiQp5ay3fRBNmR7uqmf0eJEVowVvM1IZ121C4jaPcgiOuZUFddWqwuajg+5pQY2y3t9tMAPf/7EYjeXQ==}
     engines: {node: '>=22'}
 
   '@simple-release/github-action@3.3.0':
@@ -707,6 +711,21 @@ snapshots:
       find-up-simple: 1.0.1
 
   '@simple-release/core@3.3.1':
+    dependencies:
+      '@conventional-changelog/git-client': 3.1.0(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.0)
+      '@conventional-changelog/template': 1.2.1
+      '@simple-libs/child-process-utils': 2.0.0
+      '@simple-libs/hosted-git-info': 2.0.0
+      '@simple-libs/stream-utils': 2.0.0
+      conventional-changelog: 8.1.0(conventional-commits-filter@6.0.1)
+      conventional-changelog-conventionalcommits: 10.2.1
+      conventional-changelog-preset-loader: 6.0.1
+      conventional-commits-filter: 6.0.1
+      conventional-commits-parser: 7.1.0
+      conventional-recommended-bump: 12.1.0
+      semver: 7.8.5
+
+  '@simple-release/core@4.0.0':
     dependencies:
       '@conventional-changelog/git-client': 3.1.0(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.0)
       '@conventional-changelog/template': 1.2.1
