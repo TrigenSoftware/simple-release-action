@@ -21,17 +21,17 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1
       '@simple-release/config':
-        specifier: ^3.2.5
-        version: 3.2.5
+        specifier: ^4.0.0
+        version: 4.0.0
       '@simple-release/core':
-        specifier: ^3.3.1
-        version: 3.3.1
+        specifier: ^4.0.0
+        version: 4.0.0
       '@simple-release/github':
-        specifier: ^3.3.1
-        version: 3.3.1
+        specifier: ^4.0.0
+        version: 4.0.0
       '@simple-release/github-action':
-        specifier: ^3.3.0
-        version: 3.3.0
+        specifier: ^4.0.0
+        version: 4.0.0
       npm:
         specifier: ^11.4.1
         version: 11.18.0
@@ -210,20 +210,20 @@ packages:
     resolution: {integrity: sha512-fCTuZK4QBa+39Oz9l4OGfJfz+GpwCp3AqO7Zch3to99xHPgstVsRFpeQ8LNd2o1Gv8raL2mCFwiaHh7bFSp5DQ==}
     engines: {node: '>=22'}
 
-  '@simple-release/config@3.2.5':
-    resolution: {integrity: sha512-IxNIPQ/JMSR/KF+e+JJnv1W+0KMtKMN6G6B+zIaD0M2e1aLuXaFBoUeJuaNV1eXb3F3DvnbTYjbjHqT+0Q1Ujg==}
+  '@simple-release/config@4.0.0':
+    resolution: {integrity: sha512-RVZEeAmJZDWYKtxXsrByNueDCeQSdejGSmNdiiJm7DSAxQilO+tDmfhO8ZlY4I8zUBDVEy0E4yG7vWMCUzgljg==}
     engines: {node: '>=22'}
 
-  '@simple-release/core@3.3.1':
-    resolution: {integrity: sha512-SIfJqljKLjhYlRrjVplhwlwUiPQkdDQvYfXZMqXzO8mUcrmYLR7Y/A2gKd7QhR8cqomxOrmDhkBHiLdaQKI9ig==}
+  '@simple-release/core@4.0.0':
+    resolution: {integrity: sha512-OqomtiOiQp5ay3fRBNmR7uqmf0eJEVowVvM1IZ121C4jaPcgiOuZUFddWqwuajg+5pQY2y3t9tMAPf/7EYjeXQ==}
     engines: {node: '>=22'}
 
-  '@simple-release/github-action@3.3.0':
-    resolution: {integrity: sha512-Y4iez68w4S7lyZRwQm7RJlAxvFYVVlGXgQCcTkAyHgsJ7B/4hBLPlS0qmCxUM7gk0wP+Pv2k7wEbPq+Ge6xMLw==}
+  '@simple-release/github-action@4.0.0':
+    resolution: {integrity: sha512-f0c9JCZ/BysASKiPtC1H9OLUaD3AUO+AQXRoCZLuGPtfr7OHfVaPUUFZFAkUwajl/ch4e1iivL3r2pTDsMZ8HA==}
     engines: {node: '>=22'}
 
-  '@simple-release/github@3.3.1':
-    resolution: {integrity: sha512-2kRrVqGCVMiSbFnR3aerYXYhIWbplViYjhq8kssbMTEd79ncI32OXZfkjIKmPZ8eBU6iieBExdDBcysL/8Y2xg==}
+  '@simple-release/github@4.0.0':
+    resolution: {integrity: sha512-Y+GWkOi3QsS54SY3/AAPvemjo5Qk5uQdcexgPrOiZJhgeyIurpvE7ilUBagmlH1aBjXjRDl+BDv1+G3QuBHFqg==}
     engines: {node: '>=22'}
 
   '@typespec/ts-http-runtime@0.3.6':
@@ -701,12 +701,12 @@ snapshots:
 
   '@simple-libs/stream-utils@2.0.0': {}
 
-  '@simple-release/config@3.2.5':
+  '@simple-release/config@4.0.0':
     dependencies:
-      '@simple-release/core': 3.3.1
+      '@simple-release/core': 4.0.0
       find-up-simple: 1.0.1
 
-  '@simple-release/core@3.3.1':
+  '@simple-release/core@4.0.0':
     dependencies:
       '@conventional-changelog/git-client': 3.1.0(conventional-commits-filter@6.0.1)(conventional-commits-parser@7.1.0)
       '@conventional-changelog/template': 1.2.1
@@ -721,18 +721,18 @@ snapshots:
       conventional-recommended-bump: 12.1.0
       semver: 7.8.5
 
-  '@simple-release/github-action@3.3.0':
+  '@simple-release/github-action@4.0.0':
     dependencies:
       '@actions/core': 3.0.1
       '@actions/github': 9.1.1
-      '@simple-release/config': 3.2.5
-      '@simple-release/core': 3.3.1
-      '@simple-release/github': 3.3.1
+      '@simple-release/config': 4.0.0
+      '@simple-release/core': 4.0.0
+      '@simple-release/github': 4.0.0
 
-  '@simple-release/github@3.3.1':
+  '@simple-release/github@4.0.0':
     dependencies:
       '@octokit/rest': 22.0.1
-      '@simple-release/core': 3.3.1
+      '@simple-release/core': 4.0.0
 
   '@typespec/ts-http-runtime@0.3.6':
     dependencies:
