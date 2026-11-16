@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.0](https://github.com/TrigenSoftware/simple-release-action/compare/v2.0.10...v3.0.0) (2026-11-16)
+
+### ⚠ BREAKING CHANGES
+
+* breaking releases in fixed mode bump all packages, set `bump.force` to `false` in the config to opt out.
+
+### Bug Fixes
+
+* update simple-release dependencies to v4.0.0 ([#41](https://github.com/TrigenSoftware/simple-release-action/issues/41)) ([e4cd083](https://github.com/TrigenSoftware/simple-release-action/commit/e4cd08366d077d77c4badb80536648f34b68a41a))
+
 ## [2.0.10](https://github.com/TrigenSoftware/simple-release-action/compare/v2.0.9...v2.0.10) (2026-09-05)
 
 ### Bug Fixes
