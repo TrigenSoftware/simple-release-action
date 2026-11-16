@@ -1,0 +1,32 @@
+{
+  "name": "conventional-changelog-preset-loader",
+  "type": "module",
+  "version": "6.0.1",
+  "description": "Configuration preset loader for `conventional-changelog`.",
+  "author": "Hutson Betts",
+  "license": "MIT",
+  "homepage": "https://conventional-changelog.js.org/preset-loader/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/conventional-changelog.git",
+    "directory": "packages/conventional-changelog-preset-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/conventional-changelog/issues"
+  },
+  "keywords": [
+    "conventional-changelog",
+    "preset",
+    "loader"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ]
+}
